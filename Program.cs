@@ -14,7 +14,7 @@
 
 void PrintStringArray(string[] arraystring) //Вывод введенных строк в виде массива
 {
-    Console.Write("Введенные строки: [");
+    Console.Write("[");
     for (int i = 0; i < arraystring.Length; i++)
     {
         if (i == arraystring.Length - 1)
@@ -57,7 +57,9 @@ string[] FindShortString(string[] strforsearch, int c) //Поиск в масс�
     return newstr;
 }
 string[] strarr = CreateStringArray();
+Console.Write("Введенные строки: ");
 PrintStringArray(strarr);
 int newsize = FindNewSize(strarr);
 string[] printstr = FindShortString(strarr, newsize);
+Console.Write("Строки в которых меньше 3-х символов: ");
 PrintStringArray(printstr);
